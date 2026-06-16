@@ -8,6 +8,18 @@
 
 ---
 
+## 🖼 サンプル出力（ブランドガイドラインHTML）
+
+最後の Phase 4 で生成される、ブランドガイドラインHTMLの一例です。ロゴシステム・カラーパレット・タイポグラフィ・ブランドパーソナリティ・プレビュー・チェックリストを1ページにまとめます。
+
+![ブランドガイドラインHTMLのサンプル](./docs/brand-guideline-preview.png)
+
+▶️ **実物をブラウザで開く（ライブプレビュー）:** [brand-guideline-sample.html を表示](https://htmlpreview.github.io/?https://github.com/sho-ai-magic/logo-branding-creator/blob/main/logo-branding-creator/assets/brand-guideline-sample.html)
+
+> ソースは [`logo-branding-creator/assets/brand-guideline-sample.html`](./logo-branding-creator/assets/brand-guideline-sample.html) にあります。
+
+---
+
 ## ✨ 特長
 
 - **1問ずつのヒアリング**で、専門知識ゼロでも答えられる
