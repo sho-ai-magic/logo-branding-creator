@@ -2,7 +2,7 @@
 name: logo-branding-creator
 description: ブランドのロゴとブランドアイデンティティを段階的に作成するスキル。最初にヒアリングを行い、ブランドアイデンティティ確立→ロゴコンセプト複数案生成→ロゴ批評・絞り込み→ブランドガイドライン生成→最終ロゴ決定という一貫したワークフローで進める。「ロゴを作りたい」「ブランディングしたい」「ロゴを考えて」「ブランドガイドラインを作って」「logo」「branding」「ロゴ作成」「ブランド作成」と言われたときに使用する。起業家・個人事業主・ブランディング初心者向けに、専門知識がなくても使えるよう丁寧に案内する。
 metadata:
-  author: sho
+  author: sho-ai-magic
   version: 1.0.0
   category: branding
   tags: [logo, branding, design, identity]
