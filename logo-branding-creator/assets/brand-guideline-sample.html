@@ -3,34 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SLIDE.edit — Brand & Design System</title>
+<title>Haru Coffee — Brand & Design System</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --teal-primary: #1D9E75;
-  --teal-mid: #5DCAA5;
-  --teal-light: #9FE1CB;
-  --teal-pale: #E6F7F2;
-  --charcoal: #2C2C2A;
-  --charcoal-mid: #6B6B68;
-  --charcoal-light: #A8A8A5;
-  --off-white: #F1EFE8;
+  --primary: #B26B3F;        /* メインブランドカラー（キャラメルブラウン） */
+  --primary-mid: #CB8C63;    /* 中間色 */
+  --primary-light: #E3BE9D;  /* 淡色 */
+  --primary-pale: #F6EBE0;   /* 極淡色（背景用） */
+  --dark: #382A20;           /* ほぼ黒のテキスト色（エスプレッソ） */
+  --dark-mid: #7C6B5D;       /* サブテキスト用ミッドグレー */
+  --dark-light: #ADA295;     /* キャプション用ライトグレー */
+  --off-white: #F4EEE4;      /* ページ背景・サーフェス色（クリーム） */
   --white: #FFFFFF;
-  --border: rgba(44,44,42,0.12);
-  --border-dark: rgba(44,44,42,0.24);
-  --font-body: 'Inter', -apple-system, sans-serif;
-  --font-display: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  --border: rgba(56,42,32,0.12);
+  --border-dark: rgba(56,42,32,0.24);
+  --font-body: 'Nunito Sans', -apple-system, sans-serif;
+  --font-display: 'Fraunces', Georgia, serif;
 }
 
 html { font-size: 16px; }
 
 body {
   font-family: var(--font-body);
-  color: var(--charcoal);
+  color: var(--dark);
   background: var(--white);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -56,15 +56,15 @@ body {
   gap: 8px;
   text-decoration: none;
 }
-.topbar-logo svg { width: 22px; height: 22px; }
+.topbar-logo svg { width: 22px; height: 22px; display: block; }
 .topbar-logo span {
   font-family: var(--font-display);
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--charcoal);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--dark);
   letter-spacing: -0.2px;
 }
-.topbar-logo .dot { color: var(--teal-primary); }
+.topbar-logo .accent { color: var(--primary); }
 .topbar-nav {
   display: flex;
   gap: 24px;
@@ -72,15 +72,15 @@ body {
 }
 .topbar-nav a {
   font-size: 12px;
-  color: var(--charcoal-mid);
+  color: var(--dark-mid);
   text-decoration: none;
   transition: color 0.15s;
 }
-.topbar-nav a:hover { color: var(--charcoal); }
+.topbar-nav a:hover { color: var(--dark); }
 
 /* ── HERO ── */
 .hero {
-  background: var(--charcoal);
+  background: var(--dark);
   padding: 80px 40px 72px;
   text-align: center;
   position: relative;
@@ -90,7 +90,7 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 60% 80% at 50% 120%, rgba(29,158,117,0.18) 0%, transparent 70%);
+  background: radial-gradient(ellipse 60% 80% at 50% 120%, rgba(178,107,63,0.28) 0%, transparent 70%);
   pointer-events: none;
 }
 .hero-logo {
@@ -99,18 +99,15 @@ body {
   gap: 14px;
   margin-bottom: 28px;
 }
-.hero-icon { position: relative; width: 48px; height: 40px; }
-.hero-icon .s1 { position: absolute; top: 11px; left: 11px; width: 34px; height: 24px; border-radius: 4px; background: #9FE1CB; }
-.hero-icon .s2 { position: absolute; top: 5.5px; left: 5.5px; width: 34px; height: 24px; border-radius: 4px; background: #5DCAA5; }
-.hero-icon .s3 { position: absolute; top: 0; left: 0; width: 34px; height: 24px; border-radius: 4px; background: #1D9E75; }
+.hero-logo svg { width: 46px; height: 46px; display: block; }
 .hero-wordmark {
   font-family: var(--font-display);
-  font-size: 32px;
+  font-size: 33px;
   font-weight: 500;
   color: var(--white);
   letter-spacing: -0.5px;
 }
-.hero-wordmark .dot { color: var(--teal-mid); }
+.hero-wordmark .accent { color: var(--primary-mid); }
 .hero h1 {
   font-family: var(--font-display);
   font-size: 38px;
@@ -122,7 +119,7 @@ body {
 }
 .hero p {
   font-size: 15px;
-  color: rgba(255,255,255,0.55);
+  color: rgba(255,255,255,0.6);
   max-width: 480px;
   margin: 0 auto 32px;
   line-height: 1.7;
@@ -130,12 +127,12 @@ body {
 .hero-tagline {
   display: inline-block;
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--teal-mid);
-  background: rgba(29,158,117,0.15);
-  border: 0.5px solid rgba(29,158,117,0.3);
+  color: var(--primary-mid);
+  background: rgba(178,107,63,0.18);
+  border: 0.5px solid rgba(178,107,63,0.35);
   padding: 6px 16px;
   border-radius: 99px;
 }
@@ -143,22 +140,20 @@ body {
 /* ── LAYOUT ── */
 .page { max-width: 880px; margin: 0 auto; padding: 0 40px 120px; }
 
-.section {
-  padding-top: 64px;
-}
+.section { padding-top: 64px; }
 .section-eyebrow {
   font-size: 11px;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--charcoal-light);
+  color: var(--dark-light);
   margin-bottom: 6px;
 }
 .section-title {
   font-family: var(--font-display);
   font-size: 26px;
   font-weight: 500;
-  color: var(--charcoal);
+  color: var(--dark);
   letter-spacing: -0.3px;
   margin-bottom: 24px;
 }
@@ -185,10 +180,10 @@ body {
   justify-content: center;
   gap: 8px;
 }
-.logo-box.dark { background: var(--charcoal); }
+.logo-box.dark { background: var(--dark); }
 .logo-box-label {
   font-size: 11px;
-  color: var(--charcoal-light);
+  color: var(--dark-light);
   margin-top: 16px;
   text-align: center;
   line-height: 1.5;
@@ -198,19 +193,17 @@ body {
   align-items: center;
   gap: 12px;
 }
-.logo-icon-sm { position: relative; width: 32px; height: 27px; }
-.logo-icon-sm .s1 { position: absolute; top: 7px; left: 7px; width: 23px; height: 16px; border-radius: 3px; }
-.logo-icon-sm .s2 { position: absolute; top: 3.5px; left: 3.5px; width: 23px; height: 16px; border-radius: 3px; }
-.logo-icon-sm .s3 { position: absolute; top: 0; left: 0; width: 23px; height: 16px; border-radius: 3px; }
+.logo-inline svg { width: 34px; height: 34px; display: block; }
 .wordmark-lg {
   font-family: var(--font-display);
   font-size: 24px;
   font-weight: 500;
   letter-spacing: -0.3px;
+  color: var(--dark);
 }
-.wordmark-lg .dot { color: var(--teal-primary); }
+.wordmark-lg .accent { color: var(--primary); }
 .wordmark-dark { color: var(--white); }
-.wordmark-dark .dot { color: var(--teal-mid); }
+.wordmark-dark .accent { color: var(--primary-mid); }
 
 .submark-row {
   display: flex;
@@ -219,9 +212,8 @@ body {
   flex-wrap: wrap;
 }
 .submark-item { text-align: center; }
-.submark-item p { font-size: 11px; color: var(--charcoal-light); margin-top: 6px; }
-
-.submark-svg-container svg { display: block; }
+.submark-item svg { display: block; margin: 0 auto; }
+.submark-item p { font-size: 11px; color: var(--dark-light); margin-top: 6px; }
 
 .logo-rule-grid {
   display: grid;
@@ -236,23 +228,23 @@ body {
 }
 .logo-rule-title {
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 700;
   margin-bottom: 10px;
 }
-.logo-rule-title.good { color: var(--teal-primary); }
-.logo-rule-title.bad { color: #D14343; }
+.logo-rule-title.good { color: var(--primary); }
+.logo-rule-title.bad { color: #C0453B; }
 .logo-rule-item {
   display: flex;
   align-items: flex-start;
   gap: 8px;
   font-size: 12px;
-  color: var(--charcoal-mid);
+  color: var(--dark-mid);
   padding: 4px 0;
   line-height: 1.5;
 }
 .logo-rule-item .icon { font-size: 12px; flex-shrink: 0; margin-top: 1px; }
-.logo-rule-item .icon.good { color: var(--teal-primary); }
-.logo-rule-item .icon.bad { color: #D14343; }
+.logo-rule-item .icon.good { color: var(--primary); }
+.logo-rule-item .icon.bad { color: #C0453B; }
 
 /* ── COLOR PALETTE ── */
 .color-grid {
@@ -265,30 +257,11 @@ body {
   overflow: hidden;
   border: 0.5px solid var(--border);
 }
-.color-block {
-  height: 64px;
-  width: 100%;
-}
-.color-info {
-  padding: 10px 12px;
-  background: var(--white);
-}
-.color-name {
-  font-size: 12px;
-  font-weight: 500;
-  color: var(--charcoal);
-  margin-bottom: 2px;
-}
-.color-hex {
-  font-size: 11px;
-  color: var(--charcoal-light);
-  font-family: 'SF Mono', 'Courier New', monospace;
-}
-.color-role {
-  font-size: 11px;
-  color: var(--charcoal-light);
-  margin-top: 2px;
-}
+.color-block { height: 64px; width: 100%; }
+.color-info { padding: 10px 12px; background: var(--white); }
+.color-name { font-size: 12px; font-weight: 700; color: var(--dark); margin-bottom: 2px; }
+.color-hex { font-size: 11px; color: var(--dark-light); font-family: 'SF Mono', 'Courier New', monospace; }
+.color-role { font-size: 11px; color: var(--dark-light); margin-top: 2px; }
 
 .color-usage {
   margin-top: 16px;
@@ -296,12 +269,7 @@ body {
   border-radius: 10px;
   padding: 16px 20px;
 }
-.color-usage-title {
-  font-size: 12px;
-  font-weight: 500;
-  color: var(--charcoal);
-  margin-bottom: 10px;
-}
+.color-usage-title { font-size: 12px; font-weight: 700; color: var(--dark); margin-bottom: 10px; }
 .color-usage-row {
   display: flex;
   align-items: center;
@@ -311,14 +279,9 @@ body {
   font-size: 12px;
 }
 .color-usage-row:last-child { border-bottom: none; }
-.color-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-.color-usage-name { font-weight: 500; color: var(--charcoal); width: 120px; }
-.color-usage-desc { color: var(--charcoal-mid); }
+.color-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+.color-usage-name { font-weight: 700; color: var(--dark); width: 120px; }
+.color-usage-desc { color: var(--dark-mid); }
 
 /* ── TYPOGRAPHY ── */
 .type-scale { margin-bottom: 24px; }
@@ -331,53 +294,16 @@ body {
   align-items: baseline;
 }
 .type-row:first-child { border-top: 0.5px solid var(--border); }
-.type-meta { font-size: 11px; color: var(--charcoal-light); line-height: 1.6; }
-.type-meta strong { display: block; font-size: 12px; color: var(--charcoal); font-weight: 500; margin-bottom: 2px; }
+.type-meta { font-size: 11px; color: var(--dark-light); line-height: 1.6; }
+.type-meta strong { display: block; font-size: 12px; color: var(--dark); font-weight: 700; margin-bottom: 2px; }
 
-.t-hero {
-  font-family: var(--font-display);
-  font-size: 48px;
-  font-weight: 500;
-  color: var(--charcoal);
-  letter-spacing: -0.5px;
-  line-height: 1.1;
-}
-.t-h1 {
-  font-family: var(--font-display);
-  font-size: 32px;
-  font-weight: 500;
-  color: var(--charcoal);
-  letter-spacing: -0.3px;
-  line-height: 1.2;
-}
-.t-h2 {
-  font-family: var(--font-display);
-  font-size: 22px;
-  font-weight: 500;
-  color: var(--charcoal);
-  letter-spacing: -0.2px;
-}
-.t-h3 {
-  font-family: var(--font-display);
-  font-size: 17px;
-  font-weight: 500;
-  color: var(--charcoal);
-}
-.t-body {
-  font-size: 15px;
-  color: var(--charcoal);
-  line-height: 1.7;
-}
-.t-small {
-  font-size: 13px;
-  color: var(--charcoal-mid);
-  line-height: 1.6;
-}
-.t-caption {
-  font-size: 11px;
-  color: var(--charcoal-light);
-  letter-spacing: 0.03em;
-}
+.t-hero { font-family: var(--font-display); font-size: 48px; font-weight: 500; color: var(--dark); letter-spacing: -0.5px; line-height: 1.1; }
+.t-h1 { font-family: var(--font-display); font-size: 32px; font-weight: 500; color: var(--dark); letter-spacing: -0.3px; line-height: 1.2; }
+.t-h2 { font-family: var(--font-display); font-size: 22px; font-weight: 500; color: var(--dark); letter-spacing: -0.2px; }
+.t-h3 { font-family: var(--font-display); font-size: 17px; font-weight: 600; color: var(--dark); }
+.t-body { font-size: 15px; color: var(--dark); line-height: 1.7; }
+.t-small { font-size: 13px; color: var(--dark-mid); line-height: 1.6; }
+.t-caption { font-size: 11px; color: var(--dark-light); letter-spacing: 0.03em; }
 
 .font-pair-grid {
   display: grid;
@@ -385,15 +311,11 @@ body {
   gap: 12px;
   margin-top: 16px;
 }
-.font-pair-box {
-  border: 0.5px solid var(--border);
-  border-radius: 10px;
-  padding: 20px;
-}
-.font-pair-role { font-size: 11px; color: var(--charcoal-light); margin-bottom: 8px; }
-.font-pair-name { font-size: 15px; font-weight: 500; color: var(--charcoal); margin-bottom: 4px; }
-.font-pair-sample { font-size: 13px; color: var(--charcoal-mid); }
-.font-pair-link { font-size: 11px; color: var(--teal-primary); text-decoration: none; margin-top: 8px; display: inline-block; }
+.font-pair-box { border: 0.5px solid var(--border); border-radius: 10px; padding: 20px; }
+.font-pair-role { font-size: 11px; color: var(--dark-light); margin-bottom: 8px; }
+.font-pair-name { font-size: 15px; font-weight: 700; color: var(--dark); margin-bottom: 4px; }
+.font-pair-sample { font-size: 13px; color: var(--dark-mid); }
+.font-pair-link { font-size: 11px; color: var(--primary); text-decoration: none; margin-top: 8px; display: inline-block; }
 
 /* ── BRAND PERSONALITY ── */
 .personality-grid {
@@ -401,29 +323,10 @@ body {
   grid-template-columns: repeat(5, 1fr);
   gap: 10px;
 }
-.personality-card {
-  border: 0.5px solid var(--border);
-  border-radius: 10px;
-  padding: 16px 14px;
-}
-.personality-num {
-  font-size: 11px;
-  color: var(--teal-primary);
-  font-weight: 500;
-  margin-bottom: 8px;
-}
-.personality-en {
-  font-family: var(--font-display);
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--charcoal);
-  margin-bottom: 4px;
-}
-.personality-desc {
-  font-size: 11px;
-  color: var(--charcoal-light);
-  line-height: 1.5;
-}
+.personality-card { border: 0.5px solid var(--border); border-radius: 10px; padding: 16px 14px; }
+.personality-num { font-size: 11px; color: var(--primary); font-weight: 700; margin-bottom: 8px; }
+.personality-en { font-family: var(--font-display); font-size: 14px; font-weight: 600; color: var(--dark); margin-bottom: 4px; }
+.personality-desc { font-size: 11px; color: var(--dark-light); line-height: 1.5; }
 
 /* ── TAGLINE ── */
 .tagline-grid {
@@ -431,85 +334,34 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 12px;
 }
-.tagline-card {
-  border: 0.5px solid var(--border);
-  border-radius: 10px;
-  padding: 24px 20px;
-  position: relative;
-}
-.tagline-card.featured {
-  border-color: var(--teal-primary);
-  background: var(--teal-pale);
-}
+.tagline-card { border: 0.5px solid var(--border); border-radius: 10px; padding: 24px 20px; position: relative; }
+.tagline-card.featured { border-color: var(--primary); background: var(--primary-pale); }
 .tagline-badge {
   position: absolute;
   top: 14px;
   right: 14px;
   font-size: 10px;
-  font-weight: 500;
-  color: var(--teal-primary);
-  background: rgba(29,158,117,0.15);
+  font-weight: 700;
+  color: var(--primary);
+  background: rgba(178,107,63,0.15);
   padding: 2px 8px;
   border-radius: 99px;
 }
-.tagline-label {
-  font-size: 11px;
-  color: var(--charcoal-light);
-  margin-bottom: 12px;
-}
-.tagline-text {
-  font-family: var(--font-display);
-  font-size: 17px;
-  font-weight: 500;
-  color: var(--charcoal);
-  line-height: 1.4;
-  margin-bottom: 10px;
-}
-.tagline-note {
-  font-size: 12px;
-  color: var(--charcoal-mid);
-  line-height: 1.5;
-}
+.tagline-label { font-size: 11px; color: var(--dark-light); margin-bottom: 12px; }
+.tagline-text { font-family: var(--font-display); font-size: 17px; font-weight: 500; color: var(--dark); line-height: 1.4; margin-bottom: 10px; }
+.tagline-note { font-size: 12px; color: var(--dark-mid); line-height: 1.5; }
 
 /* ── PREVIEW SECTIONS ── */
-.preview-box {
-  border: 0.5px solid var(--border);
-  border-radius: 12px;
-  overflow: hidden;
-}
-.preview-label {
-  font-size: 11px;
-  color: var(--charcoal-light);
-  padding: 10px 16px;
-  border-bottom: 0.5px solid var(--border);
-  background: var(--off-white);
-}
+.preview-box { border: 0.5px solid var(--border); border-radius: 12px; overflow: hidden; }
+.preview-label { font-size: 11px; color: var(--dark-light); padding: 10px 16px; border-bottom: 0.5px solid var(--border); background: var(--off-white); }
 
-/* Light preview */
-.preview-light {
-  background: var(--white);
-  padding: 40px;
-  text-align: center;
-}
-.preview-light-title {
-  font-family: var(--font-display);
-  font-size: 28px;
-  font-weight: 500;
-  color: var(--charcoal);
-  letter-spacing: -0.3px;
-  margin-bottom: 12px;
-}
-.preview-light-body {
-  font-size: 14px;
-  color: var(--charcoal-mid);
-  max-width: 360px;
-  margin: 0 auto 20px;
-  line-height: 1.7;
-}
+.preview-light { background: var(--white); padding: 40px; text-align: center; }
+.preview-light-title { font-family: var(--font-display); font-size: 28px; font-weight: 500; color: var(--dark); letter-spacing: -0.3px; margin-bottom: 12px; }
+.preview-light-body { font-size: 14px; color: var(--dark-mid); max-width: 360px; margin: 0 auto 20px; line-height: 1.7; }
 .btn {
   display: inline-block;
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 600;
   padding: 8px 20px;
   border-radius: 99px;
   text-decoration: none;
@@ -517,61 +369,25 @@ body {
   border: none;
   font-family: var(--font-body);
 }
-.btn-primary { background: var(--teal-primary); color: var(--white); }
-.btn-secondary {
-  background: transparent;
-  color: var(--teal-primary);
-  border: 0.5px solid var(--teal-primary);
-  margin-left: 8px;
-}
+.btn-primary { background: var(--primary); color: var(--white); }
+.btn-secondary { background: transparent; color: var(--primary); border: 0.5px solid var(--primary); margin-left: 8px; }
 
-/* Dark preview */
-.preview-dark {
-  background: var(--charcoal);
-  padding: 40px;
-  text-align: center;
-}
-.preview-dark-title {
-  font-family: var(--font-display);
-  font-size: 28px;
-  font-weight: 500;
-  color: var(--white);
-  letter-spacing: -0.3px;
-  margin-bottom: 12px;
-}
-.preview-dark-body {
-  font-size: 14px;
-  color: rgba(255,255,255,0.5);
-  max-width: 360px;
-  margin: 0 auto 20px;
-  line-height: 1.7;
-}
-.btn-dark-primary { background: var(--teal-primary); color: var(--white); }
-.btn-dark-secondary {
-  background: transparent;
-  color: var(--teal-mid);
-  border: 0.5px solid rgba(93,202,165,0.4);
-  margin-left: 8px;
-}
+.preview-dark { background: var(--dark); padding: 40px; text-align: center; }
+.preview-dark-title { font-family: var(--font-display); font-size: 28px; font-weight: 500; color: var(--white); letter-spacing: -0.3px; margin-bottom: 12px; }
+.preview-dark-body { font-size: 14px; color: rgba(255,255,255,0.55); max-width: 360px; margin: 0 auto 20px; line-height: 1.7; }
+.btn-dark-primary { background: var(--primary); color: var(--white); }
+.btn-dark-secondary { background: transparent; color: var(--primary-mid); border: 0.5px solid rgba(203,140,99,0.45); margin-left: 8px; }
 
 /* ── BRAND TONE ── */
-.tone-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-.tone-box {
-  border: 0.5px solid var(--border);
-  border-radius: 10px;
-  padding: 20px;
-}
-.tone-title { font-size: 13px; font-weight: 500; color: var(--charcoal); margin-bottom: 12px; }
+.tone-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.tone-box { border: 0.5px solid var(--border); border-radius: 10px; padding: 20px; }
+.tone-title { font-size: 13px; font-weight: 700; color: var(--dark); margin-bottom: 12px; }
 .tone-item {
   display: flex;
   align-items: flex-start;
   gap: 8px;
   font-size: 13px;
-  color: var(--charcoal-mid);
+  color: var(--dark-mid);
   padding: 5px 0;
   border-bottom: 0.5px solid var(--border);
   line-height: 1.5;
@@ -579,11 +395,7 @@ body {
 .tone-item:last-child { border-bottom: none; }
 
 /* ── CHECKLIST ── */
-.checklist {
-  border: 0.5px solid var(--border);
-  border-radius: 10px;
-  overflow: hidden;
-}
+.checklist { border: 0.5px solid var(--border); border-radius: 10px; overflow: hidden; }
 .checklist-item {
   display: flex;
   align-items: center;
@@ -591,9 +403,12 @@ body {
   padding: 12px 16px;
   border-bottom: 0.5px solid var(--border);
   font-size: 13px;
-  color: var(--charcoal);
+  color: var(--dark);
+  cursor: pointer;
+  transition: background 0.12s;
 }
 .checklist-item:last-child { border-bottom: none; }
+.checklist-item:hover { background: var(--primary-pale); }
 .checklist-box {
   width: 16px;
   height: 16px;
@@ -601,10 +416,26 @@ body {
   border-radius: 4px;
   flex-shrink: 0;
 }
+.checklist-item.checked .checklist-box {
+  background: var(--primary);
+  border-color: var(--primary);
+  position: relative;
+}
+.checklist-item.checked .checklist-box::after {
+  content: '✓';
+  color: white;
+  font-size: 11px;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.checklist-item.checked { color: var(--dark-light); text-decoration: line-through; }
 
 /* ── MISSION ── */
 .mission-box {
-  background: var(--charcoal);
+  background: var(--dark);
   border-radius: 12px;
   padding: 40px;
   text-align: center;
@@ -615,55 +446,28 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 50% 70% at 50% 110%, rgba(29,158,117,0.2) 0%, transparent 70%);
+  background: radial-gradient(ellipse 50% 70% at 50% 110%, rgba(178,107,63,0.3) 0%, transparent 70%);
   pointer-events: none;
 }
-.mission-label {
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--teal-mid);
-  margin-bottom: 16px;
-}
-.mission-text {
-  font-family: var(--font-display);
-  font-size: 20px;
-  font-weight: 500;
-  color: var(--white);
-  line-height: 1.6;
-  max-width: 560px;
-  margin: 0 auto 20px;
-  letter-spacing: -0.2px;
-}
-.mission-positioning {
-  font-size: 13px;
-  color: rgba(255,255,255,0.45);
-  max-width: 480px;
-  margin: 0 auto;
-  line-height: 1.7;
-}
+.mission-label { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--primary-mid); margin-bottom: 16px; }
+.mission-text { font-family: var(--font-display); font-size: 20px; font-weight: 500; color: var(--white); line-height: 1.6; max-width: 560px; margin: 0 auto 20px; letter-spacing: -0.2px; }
+.mission-positioning { font-size: 13px; color: rgba(255,255,255,0.5); max-width: 480px; margin: 0 auto; line-height: 1.7; }
 
 /* ── FOOTER ── */
 footer {
-  background: var(--charcoal);
+  background: var(--dark);
   padding: 32px 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.footer-logo {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.footer-copy {
-  font-size: 12px;
-  color: rgba(255,255,255,0.3);
-}
+.footer-logo { display: flex; align-items: center; gap: 8px; }
+.footer-logo svg { width: 22px; height: 22px; display: block; }
+.footer-copy { font-size: 12px; color: rgba(255,255,255,0.35); }
 
 @media (max-width: 640px) {
   .topbar { padding: 0 20px; }
+  .topbar-nav { display: none; }
   .page { padding: 0 20px 80px; }
   .color-grid { grid-template-columns: repeat(3, 1fr); }
   .personality-grid { grid-template-columns: repeat(2, 1fr); }
@@ -679,16 +483,21 @@ footer {
 </head>
 <body>
 
+<!-- ロゴアイコン（新芽モチーフ）を再利用するためのSVGシンボル定義 -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="haru-mark" viewBox="0 0 56 56">
+    <rect width="56" height="56" rx="14" fill="#B26B3F"/>
+    <path d="M28 45 V27" stroke="#F4EEE4" stroke-width="3" stroke-linecap="round"/>
+    <path d="M27 31 C18.5 31.5 13.5 26 13.5 17.5 C22 17 27 22.5 27 31 Z" fill="#E3BE9D"/>
+    <path d="M29 27 C37.5 27 42.5 21 42.5 12.5 C34 12 29 18 29 27 Z" fill="#F4EEE4"/>
+  </symbol>
+</svg>
+
 <!-- TOPBAR -->
 <nav class="topbar">
   <a href="#" class="topbar-logo">
-    <svg viewBox="0 0 56 56" fill="none">
-      <rect width="56" height="56" rx="12" fill="#1D9E75"/>
-      <rect x="18" y="24" width="24" height="17" rx="2" fill="#9FE1CB"/>
-      <rect x="14" y="20" width="24" height="17" rx="2" fill="#5DCAA5"/>
-      <rect x="10" y="16" width="24" height="17" rx="2" fill="white"/>
-    </svg>
-    <span>SLIDE<span class="dot">.</span>edit</span>
+    <svg><use href="#haru-mark"/></svg>
+    <span>Haru <span class="accent">Coffee</span></span>
   </a>
   <ul class="topbar-nav">
     <li><a href="#logo">ロゴ</a></li>
@@ -702,16 +511,12 @@ footer {
 <!-- HERO -->
 <div class="hero">
   <div class="hero-logo">
-    <div class="hero-icon">
-      <div class="s1"></div>
-      <div class="s2"></div>
-      <div class="s3"></div>
-    </div>
-    <div class="hero-wordmark">SLIDE<span class="dot">.</span>edit</div>
+    <svg><use href="#haru-mark"/></svg>
+    <div class="hero-wordmark">Haru <span class="accent">Coffee</span></div>
   </div>
   <h1>Brand &amp; Design System</h1>
-  <p>SLIDE.editのブランドアイデンティティ、カラー、タイポグラフィ、ロゴシステムを定義するデザインガイドライン</p>
-  <span class="hero-tagline">Your slides, your rules.</span>
+  <p>Haru Coffee のブランドアイデンティティ、カラー、タイポグラフィ、ロゴシステムを定義するデザインガイドライン</p>
+  <span class="hero-tagline">A cup of spring.</span>
 </div>
 
 <div class="page">
@@ -725,97 +530,54 @@ footer {
       <!-- Light -->
       <div class="logo-box">
         <div class="logo-inline">
-          <div class="logo-icon-sm">
-            <div class="s1" style="background:#9FE1CB;"></div>
-            <div class="s2" style="background:#5DCAA5;"></div>
-            <div class="s3" style="background:#1D9E75;"></div>
-          </div>
-          <span class="wordmark-lg">SLIDE<span class="dot">.</span>edit</span>
+          <svg><use href="#haru-mark"/></svg>
+          <span class="wordmark-lg">Haru <span class="accent">Coffee</span></span>
         </div>
-        <p class="logo-box-label">ライト背景用 — LP・ヘッダー・README</p>
+        <p class="logo-box-label">ライト背景用 — 店頭サイン・メニュー・Web</p>
       </div>
       <!-- Dark -->
       <div class="logo-box dark">
         <div class="logo-inline">
-          <div class="logo-icon-sm">
-            <div class="s1" style="background:#9FE1CB;"></div>
-            <div class="s2" style="background:#5DCAA5;"></div>
-            <div class="s3" style="background:#1D9E75;"></div>
-          </div>
-          <span class="wordmark-lg wordmark-dark">SLIDE<span class="dot">.</span>edit</span>
+          <svg><use href="#haru-mark"/></svg>
+          <span class="wordmark-lg wordmark-dark">Haru <span class="accent">Coffee</span></span>
         </div>
-        <p class="logo-box-label" style="color:rgba(255,255,255,0.3);">ダーク背景用 — OGP・ダークUI</p>
+        <p class="logo-box-label" style="color:rgba(255,255,255,0.35);">ダーク背景用 — パッケージ・SNS・看板</p>
       </div>
     </div>
 
     <!-- サブマーク -->
     <div style="border: 0.5px solid var(--border); border-radius: 12px; padding: 24px 32px;">
-      <p style="font-size: 12px; color: var(--charcoal-light); margin-bottom: 20px;">サブマーク — ファビコン・X・小サイズ専用</p>
+      <p style="font-size: 12px; color: var(--dark-light); margin-bottom: 20px;">サブマーク — ファビコン・SNSアイコン・小サイズ専用</p>
       <div class="submark-row">
         <div class="submark-item">
-          <svg width="64" height="64" viewBox="0 0 56 56" fill="none">
-            <rect width="56" height="56" rx="12" fill="#1D9E75"/>
-            <rect x="18" y="24" width="24" height="17" rx="2" fill="#9FE1CB"/>
-            <rect x="14" y="20" width="24" height="17" rx="2" fill="#5DCAA5"/>
-            <rect x="10" y="16" width="24" height="17" rx="2" fill="white"/>
-          </svg>
+          <svg width="64" height="64"><use href="#haru-mark"/></svg>
           <p>64px</p>
         </div>
         <div class="submark-item">
-          <svg width="48" height="48" viewBox="0 0 56 56" fill="none">
-            <rect width="56" height="56" rx="12" fill="#1D9E75"/>
-            <rect x="18" y="24" width="24" height="17" rx="2" fill="#9FE1CB"/>
-            <rect x="14" y="20" width="24" height="17" rx="2" fill="#5DCAA5"/>
-            <rect x="10" y="16" width="24" height="17" rx="2" fill="white"/>
-          </svg>
+          <svg width="48" height="48"><use href="#haru-mark"/></svg>
           <p>48px</p>
         </div>
         <div class="submark-item">
-          <svg width="32" height="32" viewBox="0 0 56 56" fill="none">
-            <rect width="56" height="56" rx="12" fill="#1D9E75"/>
-            <rect x="18" y="24" width="24" height="17" rx="2" fill="#9FE1CB"/>
-            <rect x="14" y="20" width="24" height="17" rx="2" fill="#5DCAA5"/>
-            <rect x="10" y="16" width="24" height="17" rx="2" fill="white"/>
-          </svg>
+          <svg width="32" height="32"><use href="#haru-mark"/></svg>
           <p>32px</p>
         </div>
         <div class="submark-item">
-          <svg width="20" height="20" viewBox="0 0 56 56" fill="none">
-            <rect width="56" height="56" rx="12" fill="#1D9E75"/>
-            <rect x="18" y="24" width="24" height="17" rx="2" fill="#9FE1CB"/>
-            <rect x="14" y="20" width="24" height="17" rx="2" fill="#5DCAA5"/>
-            <rect x="10" y="16" width="24" height="17" rx="2" fill="white"/>
-          </svg>
+          <svg width="20" height="20"><use href="#haru-mark"/></svg>
           <p>20px</p>
         </div>
         <div class="submark-item">
-          <svg width="16" height="16" viewBox="0 0 56 56" fill="none">
-            <rect width="56" height="56" rx="12" fill="#1D9E75"/>
-            <rect x="18" y="24" width="24" height="17" rx="2" fill="#9FE1CB"/>
-            <rect x="14" y="20" width="24" height="17" rx="2" fill="#5DCAA5"/>
-            <rect x="10" y="16" width="24" height="17" rx="2" fill="white"/>
-          </svg>
+          <svg width="16" height="16"><use href="#haru-mark"/></svg>
           <p>16px</p>
         </div>
         <!-- dark bg -->
-        <div style="background: var(--charcoal); border-radius: 10px; padding: 16px 24px; display: flex; align-items: center; gap: 16px; margin-left: auto;">
+        <div style="background: var(--dark); border-radius: 10px; padding: 16px 24px; display: flex; align-items: center; gap: 16px; margin-left: auto;">
           <div class="submark-item">
-            <svg width="40" height="40" viewBox="0 0 56 56" fill="none">
-              <rect width="56" height="56" rx="12" fill="#1D9E75"/>
-              <rect x="18" y="24" width="24" height="17" rx="2" fill="#9FE1CB"/>
-              <rect x="14" y="20" width="24" height="17" rx="2" fill="#5DCAA5"/>
-              <rect x="10" y="16" width="24" height="17" rx="2" fill="white"/>
-            </svg>
-            <p style="color:rgba(255,255,255,0.3);">ダーク</p>
+            <svg width="40" height="40"><use href="#haru-mark"/></svg>
+            <p style="color:rgba(255,255,255,0.35);">ダーク</p>
           </div>
           <div class="submark-item">
-            <svg width="24" height="24" viewBox="0 0 56 56" fill="none">
-              <rect width="56" height="56" rx="12" fill="#1D9E75"/>
-              <rect x="18" y="24" width="24" height="17" rx="2" fill="#9FE1CB"/>
-              <rect x="14" y="20" width="24" height="17" rx="2" fill="#5DCAA5"/>
-              <rect x="10" y="16" width="24" height="17" rx="2" fill="white"/>
-            </svg>
-            <p style="color:rgba(255,255,255,0.3);">小</p>
+            <svg width="24" height="24"><use href="#haru-mark"/></svg>
+            <p style="color:rgba(255,255,255,0.35);">小</p>
           </div>
         </div>
       </div>
@@ -825,8 +587,8 @@ footer {
     <div class="logo-rule-grid">
       <div class="logo-rule-box">
         <p class="logo-rule-title good">使ってよいパターン</p>
-        <div class="logo-rule-item"><span class="icon good">○</span>ターコイズ版（カラー）</div>
-        <div class="logo-rule-item"><span class="icon good">○</span>モノクロ版（黒・白）</div>
+        <div class="logo-rule-item"><span class="icon good">○</span>キャラメルブラウン版（カラー）</div>
+        <div class="logo-rule-item"><span class="icon good">○</span>モノクロ版（エスプレッソ・白）</div>
         <div class="logo-rule-item"><span class="icon good">○</span>ダーク背景上の白抜き版</div>
         <div class="logo-rule-item"><span class="icon good">○</span>小サイズではサブマーク単体</div>
       </div>
@@ -849,42 +611,42 @@ footer {
 
     <div class="color-grid">
       <div class="color-swatch">
-        <div class="color-block" style="background:#1D9E75;"></div>
+        <div class="color-block" style="background:#B26B3F;"></div>
         <div class="color-info">
-          <p class="color-name">Teal Primary</p>
-          <p class="color-hex">#1D9E75</p>
+          <p class="color-name">Caramel Brown</p>
+          <p class="color-hex">#B26B3F</p>
           <p class="color-role">メインカラー・60%</p>
         </div>
       </div>
       <div class="color-swatch">
-        <div class="color-block" style="background:#5DCAA5;"></div>
+        <div class="color-block" style="background:#CB8C63;"></div>
         <div class="color-info">
-          <p class="color-name">Teal Mid</p>
-          <p class="color-hex">#5DCAA5</p>
+          <p class="color-name">Latte</p>
+          <p class="color-hex">#CB8C63</p>
           <p class="color-role">サブカラー・25%</p>
         </div>
       </div>
       <div class="color-swatch">
-        <div class="color-block" style="background:#9FE1CB;"></div>
+        <div class="color-block" style="background:#E3BE9D;"></div>
         <div class="color-info">
-          <p class="color-name">Teal Light</p>
-          <p class="color-hex">#9FE1CB</p>
+          <p class="color-name">Cream Sand</p>
+          <p class="color-hex">#E3BE9D</p>
           <p class="color-role">アクセント・10%</p>
         </div>
       </div>
       <div class="color-swatch">
-        <div class="color-block" style="background:#2C2C2A;"></div>
+        <div class="color-block" style="background:#382A20;"></div>
         <div class="color-info">
-          <p class="color-name">Charcoal</p>
-          <p class="color-hex">#2C2C2A</p>
+          <p class="color-name">Espresso</p>
+          <p class="color-hex">#382A20</p>
           <p class="color-role">テキスト・5%</p>
         </div>
       </div>
       <div class="color-swatch">
-        <div class="color-block" style="background:#F1EFE8; border-bottom: 0.5px solid var(--border);"></div>
+        <div class="color-block" style="background:#F4EEE4; border-bottom: 0.5px solid var(--border);"></div>
         <div class="color-info">
-          <p class="color-name">Off White</p>
-          <p class="color-hex">#F1EFE8</p>
+          <p class="color-name">Cream</p>
+          <p class="color-hex">#F4EEE4</p>
           <p class="color-role">背景・ベース</p>
         </div>
       </div>
@@ -893,28 +655,28 @@ footer {
     <div class="color-usage">
       <p class="color-usage-title">各色の用途</p>
       <div class="color-usage-row">
-        <div class="color-dot" style="background:#1D9E75;"></div>
-        <span class="color-usage-name">Teal Primary</span>
+        <div class="color-dot" style="background:#B26B3F;"></div>
+        <span class="color-usage-name">Caramel Brown</span>
         <span class="color-usage-desc">ロゴ・ボタン・リンク・アクセント要素。ブランドの顔。</span>
       </div>
       <div class="color-usage-row">
-        <div class="color-dot" style="background:#5DCAA5;"></div>
-        <span class="color-usage-name">Teal Mid</span>
-        <span class="color-usage-desc">Slide Stackの中間層・ホバー状態・サブ要素。</span>
+        <div class="color-dot" style="background:#CB8C63;"></div>
+        <span class="color-usage-name">Latte</span>
+        <span class="color-usage-desc">ホバー状態・サブ要素・グラデーションの中間色。</span>
       </div>
       <div class="color-usage-row">
-        <div class="color-dot" style="background:#9FE1CB;"></div>
-        <span class="color-usage-name">Teal Light</span>
+        <div class="color-dot" style="background:#E3BE9D;"></div>
+        <span class="color-usage-name">Cream Sand</span>
         <span class="color-usage-desc">背景の差し色・バッジ・インフォメーションエリア。</span>
       </div>
       <div class="color-usage-row">
-        <div class="color-dot" style="background:#2C2C2A;"></div>
-        <span class="color-usage-name">Charcoal</span>
+        <div class="color-dot" style="background:#382A20;"></div>
+        <span class="color-usage-name">Espresso</span>
         <span class="color-usage-desc">見出し・本文テキスト・枠線・アイコン。</span>
       </div>
       <div class="color-usage-row">
-        <div class="color-dot" style="background:#F1EFE8; border: 0.5px solid var(--border);"></div>
-        <span class="color-usage-name">Off White</span>
+        <div class="color-dot" style="background:#F4EEE4; border: 0.5px solid var(--border);"></div>
+        <span class="color-usage-name">Cream</span>
         <span class="color-usage-desc">ページ背景・カードサーフェス・セクション区切り。</span>
       </div>
     </div>
@@ -931,66 +693,66 @@ footer {
       <div class="type-row">
         <div class="type-meta">
           <strong>Hero / Display</strong>
-          Plus Jakarta Sans<br>48px · weight 500<br>letter-spacing -0.5px
+          Fraunces<br>48px · weight 500<br>letter-spacing -0.5px
         </div>
-        <div class="t-hero">スライドを、自分のものに。</div>
+        <div class="t-hero">春を、一杯に。</div>
       </div>
       <div class="type-row">
         <div class="type-meta">
           <strong>H1 / Page Title</strong>
-          Plus Jakarta Sans<br>32px · weight 500<br>letter-spacing -0.3px
+          Fraunces<br>32px · weight 500<br>letter-spacing -0.3px
         </div>
-        <div class="t-h1">AIで生成、自由に編集。</div>
+        <div class="t-h1">今日も、いい一日のはじまりに。</div>
       </div>
       <div class="type-row">
         <div class="type-meta">
           <strong>H2 / Section</strong>
-          Plus Jakarta Sans<br>22px · weight 500<br>letter-spacing -0.2px
+          Fraunces<br>22px · weight 500<br>letter-spacing -0.2px
         </div>
-        <div class="t-h2">SLIDE.mdデザインシステム</div>
+        <div class="t-h2">Haru Coffee のこだわり</div>
       </div>
       <div class="type-row">
         <div class="type-meta">
           <strong>H3 / Subsection</strong>
-          Plus Jakarta Sans<br>17px · weight 500
+          Fraunces<br>17px · weight 600
         </div>
-        <div class="t-h3">キャンバス型エディタの操作</div>
+        <div class="t-h3">一杯ずつ手で淹れる理由</div>
       </div>
       <div class="type-row">
         <div class="type-meta">
           <strong>Body</strong>
-          Inter<br>15px · weight 400<br>line-height 1.7
+          Nunito Sans<br>15px · weight 400<br>line-height 1.7
         </div>
-        <div class="t-body">HTMLスライドを、思い通りに編集できる。SLIDE.editはAIで生成したスライドを完全にコントロールするためのWebアプリです。直感的な操作で、プロ品質のアウトプットを届けます。</div>
+        <div class="t-body">朝の光が差し込む店内で、季節ごとに変わる自家焙煎の豆を、一杯ずつ丁寧にハンドドリップ。忙しい毎日にひと息つける、あなただけの時間をお届けします。</div>
       </div>
       <div class="type-row">
         <div class="type-meta">
           <strong>Small</strong>
-          Inter<br>13px · weight 400<br>line-height 1.6
+          Nunito Sans<br>13px · weight 400<br>line-height 1.6
         </div>
-        <div class="t-small">スライドのデザインシステムを独自に提唱。すべての要素を細部まで編集可能。</div>
+        <div class="t-small">スイーツはすべて店内の手づくり。コーヒーに合う素朴な甘さにこだわっています。</div>
       </div>
       <div class="type-row">
         <div class="type-meta">
           <strong>Caption / Label</strong>
-          Inter<br>11px · weight 400<br>letter-spacing 0.03em
+          Nunito Sans<br>11px · weight 400<br>letter-spacing 0.03em
         </div>
-        <div class="t-caption">VERSION 1.0 · JUNE 2025 · CLOUDFLARE PAGES</div>
+        <div class="t-caption">VERSION 1.0 · 2026 · HARU COFFEE</div>
       </div>
     </div>
 
     <div class="font-pair-grid">
       <div class="font-pair-box">
         <p class="font-pair-role">ディスプレイ・見出し用</p>
-        <p class="font-pair-name" style="font-family: var(--font-display);">Plus Jakarta Sans</p>
+        <p class="font-pair-name" style="font-family: var(--font-display);">Fraunces</p>
         <p class="font-pair-sample">ABCDEFG abcdefg 0123</p>
-        <a href="https://fonts.google.com/specimen/Plus+Jakarta+Sans" class="font-pair-link">Google Fonts で入手</a>
+        <a href="https://fonts.google.com/specimen/Fraunces" class="font-pair-link">Google Fonts で入手</a>
       </div>
       <div class="font-pair-box">
         <p class="font-pair-role">本文・UI・キャプション用</p>
-        <p class="font-pair-name">Inter</p>
+        <p class="font-pair-name">Nunito Sans</p>
         <p class="font-pair-sample">ABCDEFG abcdefg 0123</p>
-        <a href="https://fonts.google.com/specimen/Inter" class="font-pair-link">Google Fonts で入手</a>
+        <a href="https://fonts.google.com/specimen/Nunito+Sans" class="font-pair-link">Google Fonts で入手</a>
       </div>
     </div>
   </div>
@@ -1005,76 +767,76 @@ footer {
     <div class="personality-grid">
       <div class="personality-card">
         <p class="personality-num">01</p>
-        <p class="personality-en">Reliable</p>
-        <p class="personality-desc">動けば動くほど信頼できる</p>
+        <p class="personality-en">Warm</p>
+        <p class="personality-desc">心がほどける温かさ</p>
       </div>
       <div class="personality-card">
         <p class="personality-num">02</p>
-        <p class="personality-en">Approachable</p>
-        <p class="personality-desc">誰でもすぐ使いこなせる</p>
+        <p class="personality-en">Handmade</p>
+        <p class="personality-desc">ひとつずつ丁寧に</p>
       </div>
       <div class="personality-card">
         <p class="personality-num">03</p>
-        <p class="personality-en">Flexible</p>
-        <p class="personality-desc">思い通りに編集できる</p>
+        <p class="personality-en">Natural</p>
+        <p class="personality-desc">飾らない心地よさ</p>
       </div>
       <div class="personality-card">
         <p class="personality-num">04</p>
-        <p class="personality-en">Polished</p>
-        <p class="personality-desc">アウトプットが美しい</p>
+        <p class="personality-en">Honest</p>
+        <p class="personality-desc">素材にうそをつかない</p>
       </div>
       <div class="personality-card">
         <p class="personality-num">05</p>
-        <p class="personality-en">Forward-thinking</p>
-        <p class="personality-desc">AIと共に進化する</p>
+        <p class="personality-en">Everyday</p>
+        <p class="personality-desc">暮らしに寄り添う</p>
       </div>
     </div>
 
     <!-- Taglines -->
-    <h3 style="font-family: var(--font-display); font-size: 17px; font-weight: 500; color: var(--charcoal); margin: 32px 0 16px;">タグライン</h3>
+    <h3 style="font-family: var(--font-display); font-size: 17px; font-weight: 600; color: var(--dark); margin: 32px 0 16px;">タグライン</h3>
     <div class="tagline-grid">
       <div class="tagline-card featured">
         <span class="tagline-badge">推薦</span>
         <p class="tagline-label">案 A</p>
-        <p class="tagline-text">Your slides, your rules.</p>
-        <p class="tagline-note">英語圏・日本語圏両対応。英語表記でもLP・SNSで自然に読まれる。コアバリューを一言で表現。</p>
+        <p class="tagline-text">A cup of spring.</p>
+        <p class="tagline-note">「春を一杯に」。短く記憶に残る英語表記。カップ・看板・SNSで自然に映える。ブランド名Haruとも呼応。</p>
       </div>
       <div class="tagline-card">
         <p class="tagline-label">案 B</p>
-        <p class="tagline-text">Edit freely. Present boldly.</p>
-        <p class="tagline-note">「編集の自由」と「プレゼンの自信」を対にした構造。英語的リズムが良い。</p>
+        <p class="tagline-text">今日も、いい一日のはじまりに。</p>
+        <p class="tagline-note">日本語の温かいメッセージ。日常に寄り添う姿勢を直接的に伝える。店内POP向け。</p>
       </div>
       <div class="tagline-card">
         <p class="tagline-label">案 C</p>
-        <p class="tagline-text">AI生成スライドを、自分のものに。</p>
-        <p class="tagline-note">日本語LP・X投稿向け。プロダクトの価値を最も直接的に伝える。</p>
+        <p class="tagline-text">手づくりの、しあわせな時間。</p>
+        <p class="tagline-note">カフェ体験そのものを表現。ハンドドリップ・手づくりスイーツの価値を伝える。</p>
       </div>
     </div>
 
     <!-- Tone of voice -->
-    <h3 style="font-family: var(--font-display); font-size: 17px; font-weight: 500; color: var(--charcoal); margin: 32px 0 16px;">トーン・オブ・ボイス</h3>
+    <h3 style="font-family: var(--font-display); font-size: 17px; font-weight: 600; color: var(--dark); margin: 32px 0 16px;">トーン・オブ・ボイス</h3>
     <div class="tone-grid">
       <div class="tone-box">
         <p class="tone-title">心がけること</p>
-        <div class="tone-item">専門的すぎず、軽すぎない「頼れる友人」の口調</div>
-        <div class="tone-item">ユーザーの作業をさりげなくサポートする言葉</div>
-        <div class="tone-item">成功を一緒に喜べるような表現</div>
-        <div class="tone-item">能動態を使い、何が起きるか明確に伝える</div>
+        <div class="tone-item">友人を家に招くような、親しみのある言葉</div>
+        <div class="tone-item">素材やこだわりを、押しつけずに伝える</div>
+        <div class="tone-item">ほっとできる、やわらかい語り口</div>
+        <div class="tone-item">香り・温度・季節など五感に訴える描写</div>
       </div>
       <div class="tone-box">
         <p class="tone-title">避けること</p>
-        <div class="tone-item">過度な技術用語・専門的すぎる表現</div>
-        <div class="tone-item">曖昧なエラーメッセージ・「申し訳ありません」の乱用</div>
-        <div class="tone-item">過剰な敬語・硬すぎるフォーマル表現</div>
-        <div class="tone-item">ポップすぎる・軽すぎる絵文字の多用</div>
+        <div class="tone-item">高級志向を強調しすぎる表現</div>
+        <div class="tone-item">専門用語・コーヒーマニア的な難しさ</div>
+        <div class="tone-item">冷たい・事務的な言い回し</div>
+        <div class="tone-item">過剰な宣伝・煽るような表現</div>
       </div>
     </div>
 
     <!-- Mission -->
     <div class="mission-box" style="margin-top: 24px;">
       <p class="mission-label">Mission</p>
-      <p class="mission-text">スライドを作るすべての人に、AIで生成したHTMLスライドを自由自在に編集できる環境を届ける。</p>
-      <p class="mission-positioning">SLIDE.mdというデザインシステムを軸に、誰でもプロ品質のスライドを完全にコントロールできるようにする。</p>
+      <p class="mission-text">一杯のコーヒーを通じて、いそがしい毎日にひと息つける「自分の時間」を届ける。</p>
+      <p class="mission-positioning">近所の人がふらりと立ち寄れる、肩ひじはらないカフェ。手づくりとアースカラーの温かさで、日常をちょっと豊かにする。</p>
     </div>
   </div>
 
@@ -1089,10 +851,10 @@ footer {
     <div class="preview-box" style="margin-bottom: 16px;">
       <p class="preview-label">ライト背景</p>
       <div class="preview-light">
-        <p class="preview-light-title">まったく新しいスライド体験。</p>
-        <p class="preview-light-body">AIで生成したHTMLスライドを、思い通りに編集できる。SLIDE.editが、あなたのスライド制作を変えます。</p>
-        <button class="btn btn-primary">今すぐ試す</button>
-        <button class="btn btn-secondary">もっと詳しく</button>
+        <p class="preview-light-title">朝の一杯から、はじめよう。</p>
+        <p class="preview-light-body">季節の自家焙煎を、一杯ずつ手で淹れて。Haru Coffee で、いつもの一日をすこしだけ豊かに。</p>
+        <button class="btn btn-primary">メニューを見る</button>
+        <button class="btn btn-secondary">お店について</button>
       </div>
     </div>
 
@@ -1100,10 +862,10 @@ footer {
     <div class="preview-box">
       <p class="preview-label">ダーク背景</p>
       <div class="preview-dark">
-        <p class="preview-dark-title">スライドの完全コントロール。</p>
-        <p class="preview-dark-body">SLIDE.mdデザインシステムによって、あらゆる要素を細部まで自由に編集できます。</p>
-        <button class="btn btn-dark-primary">無料で始める</button>
-        <button class="btn btn-dark-secondary">デモを見る</button>
+        <p class="preview-dark-title">手づくりの、しあわせな時間。</p>
+        <p class="preview-dark-body">コーヒーに合う素朴なスイーツも、すべて店内の手づくり。ゆっくり過ごせる時間をどうぞ。</p>
+        <button class="btn btn-dark-primary">テイクアウト予約</button>
+        <button class="btn btn-dark-secondary">アクセス</button>
       </div>
     </div>
   </div>
@@ -1114,18 +876,19 @@ footer {
   <div class="section">
     <p class="section-eyebrow">06 / CHECKLIST</p>
     <h2 class="section-title">ブランドチェックリスト</h2>
+    <p style="font-size:12px; color:var(--dark-light); margin:-16px 0 16px;">各項目をクリックするとチェックできます。</p>
 
     <div class="checklist">
-      <div class="checklist-item"><div class="checklist-box"></div>ロゴは規定のカラーバリエーションを使っているか</div>
-      <div class="checklist-item"><div class="checklist-box"></div>ロゴの周囲にロゴ高さ0.5倍以上のクリアスペースが確保されているか</div>
-      <div class="checklist-item"><div class="checklist-box"></div>小サイズ（32px以下）ではサブマークに切り替えているか</div>
-      <div class="checklist-item"><div class="checklist-box"></div>メインカラーはTeal Primary（#1D9E75）を使っているか</div>
-      <div class="checklist-item"><div class="checklist-box"></div>フォントはPlus Jakarta Sans / Interで統一されているか</div>
-      <div class="checklist-item"><div class="checklist-box"></div>フォントウェイトは400・500のみか</div>
-      <div class="checklist-item"><div class="checklist-box"></div>余白は十分に確保されているか（窮屈に見えないか）</div>
-      <div class="checklist-item"><div class="checklist-box"></div>モノクロ印刷でもロゴが判別できるか</div>
-      <div class="checklist-item"><div class="checklist-box"></div>トーン・オブ・ボイスは「頼れる友人」らしい言葉遣いか</div>
-      <div class="checklist-item"><div class="checklist-box"></div>Xプロフィール・ファビコンにサブマークを設定しているか</div>
+      <div class="checklist-item" onclick="this.classList.toggle('checked')"><div class="checklist-box"></div>ロゴは規定のカラーバリエーションを使っているか</div>
+      <div class="checklist-item" onclick="this.classList.toggle('checked')"><div class="checklist-box"></div>ロゴの周囲にロゴ高さ0.5倍以上のクリアスペースが確保されているか</div>
+      <div class="checklist-item" onclick="this.classList.toggle('checked')"><div class="checklist-box"></div>小サイズ（32px以下）ではサブマークに切り替えているか</div>
+      <div class="checklist-item" onclick="this.classList.toggle('checked')"><div class="checklist-box"></div>メインカラーはCaramel Brown（#B26B3F）を使っているか</div>
+      <div class="checklist-item" onclick="this.classList.toggle('checked')"><div class="checklist-box"></div>フォントはFraunces / Nunito Sansで統一されているか</div>
+      <div class="checklist-item" onclick="this.classList.toggle('checked')"><div class="checklist-box"></div>余白は十分に確保されているか（窮屈に見えないか）</div>
+      <div class="checklist-item" onclick="this.classList.toggle('checked')"><div class="checklist-box"></div>モノクロ印刷でもロゴが判別できるか</div>
+      <div class="checklist-item" onclick="this.classList.toggle('checked')"><div class="checklist-box"></div>写真はアースカラー・自然光の温かいトーンか</div>
+      <div class="checklist-item" onclick="this.classList.toggle('checked')"><div class="checklist-box"></div>トーン・オブ・ボイスは「親しみのある友人」らしい言葉遣いか</div>
+      <div class="checklist-item" onclick="this.classList.toggle('checked')"><div class="checklist-box"></div>SNSプロフィール・ファビコンにサブマークを設定しているか</div>
     </div>
   </div>
 
@@ -1134,13 +897,8 @@ footer {
 <!-- FOOTER -->
 <footer>
   <div class="footer-logo">
-    <svg width="22" height="22" viewBox="0 0 56 56" fill="none">
-      <rect width="56" height="56" rx="12" fill="#1D9E75"/>
-      <rect x="18" y="24" width="24" height="17" rx="2" fill="#9FE1CB"/>
-      <rect x="14" y="20" width="24" height="17" rx="2" fill="#5DCAA5"/>
-      <rect x="10" y="16" width="24" height="17" rx="2" fill="white"/>
-    </svg>
-    <span style="font-family: var(--font-display); font-size: 14px; font-weight: 500; color: var(--white); letter-spacing: -0.2px; margin-left: 8px;">SLIDE<span style="color: #5DCAA5;">.</span>edit</span>
+    <svg><use href="#haru-mark"/></svg>
+    <span style="font-family: var(--font-display); font-size: 14px; font-weight: 600; color: var(--white); letter-spacing: -0.2px; margin-left: 4px;">Haru <span style="color: var(--primary-mid);">Coffee</span></span>
   </div>
   <p class="footer-copy">Brand &amp; Design System — Version 1.0</p>
 </footer>
